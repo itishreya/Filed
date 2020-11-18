@@ -1,0 +1,56 @@
+
+
+:host {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+}
+
+form {
+  margin:0;
+}
+
+h2 {
+  color: #68B613;
+  font-size: 2em;
+}
+
+label {
+  display: block;
+  width: 16em;
+  margin: .5em 0;
+  color: #68B613;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+input {
+  height: 2em;
+  font-size: 1em;
+  padding-left: .4em;
+  border: solid white 1px;
+}
+
+button {
+  background-color: #68B613;
+  border: solid black 1px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}
+
+mat-error {
+  font-size: 1.4em;
+}

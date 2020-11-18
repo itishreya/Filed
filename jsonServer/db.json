@@ -1,0 +1,44 @@
+{
+  "people": [
+    {
+      "id": 1,
+      "creditCardNumber": "3214567234561984",
+      "cardHolder": "Alam Mistry",
+      "expirationDate": "25-06-2024",
+      "securityCode": "256",
+      "amount": 21890
+    },
+    {
+      "creditCardNumber": "2365482305373834",
+      "cardHolder": "rene dalal",
+      "expirationDate": "2020-11-27",
+      "securityCode": "938",
+      "amount": "67244",
+      "id": 2
+    },
+    {
+      "creditCardNumber": "1287354920360026",
+      "cardHolder": "Tanya Mehra",
+      "expirationDate": "2023-12-30",
+      "securityCode": "435",
+      "amount": "9034",
+      "id": 3
+    },
+    {
+      "creditCardNumber": "7624100962481093",
+      "cardHolder": "Niha Malik",
+      "expirationDate": "2022-10-31",
+      "securityCode": "720",
+      "amount": "30000",
+      "id": 4
+    },
+    {
+      "creditCardNumber": "",
+      "cardHolder": "",
+      "expirationDate": "",
+      "securityCode": "",
+      "amount": "",
+      "id": 5
+    }
+  ]
+}

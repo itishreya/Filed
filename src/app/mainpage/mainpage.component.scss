@@ -1,0 +1,38 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.8);
+  height:750px;
+  width:750px;
+  align-items: center;
+  margin: auto;
+}
+
+h2 {
+  position: absolute;
+  top: 40%;
+  color: #68B613;
+  font-size: 2em;
+  text-align: center;
+}
+
+button {
+  position: absolute;
+  top: 60%;
+  background-color: #68B613;
+  border: solid black 1px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}

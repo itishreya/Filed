@@ -1,0 +1,81 @@
+
+
+<form [formGroup]="cardForm" (ngSubmit)="onSubmit($event)">
+
+<h2>Enter Card Details</h2>
+
+<br>
+
+<label>
+  Card Number:
+  <mat-form-field class="full-width-input">
+  <input matInput type="text" formControlName="number" required>
+  <mat-error *ngIf="cardForm.get('number').hasError('required')">
+        Card Number is required
+  </mat-error>
+</mat-form-field>
+</label>
+
+<br>
+
+<label>
+  Card Holder Name:
+  <mat-form-field class="full-width-input">
+  <input matInput type="text" formControlName="name" required>
+  <mat-error *ngIf="cardForm.get('name').hasError('required')">
+        Name is required
+  </mat-error>
+</mat-form-field>
+</label>
+
+<br>
+
+<label>
+  Expiration Date:
+  <mat-form-field class="full-width-input">
+  <input matInput type="date" formControlName="date" min="{{minDate}}" required>
+  <mat-error *ngIf="cardForm.get('date').hasError('min') && !cardForm.get('date').hasError('required')">
+      Please enter a valid date
+  </mat-error>
+  <mat-error *ngIf="cardForm.get('date').hasError('required')">
+        Expiration date is required
+  </mat-error>
+</mat-form-field>
+</label>
+
+<br>
+
+<label>
+  Security Code:
+  <mat-form-field class="full-width-input">
+  <input matInput type="password" formControlName="code">
+  <mat-error *ngIf="cardForm.get('code').hasError('minlength') || cardForm.get('code').hasError('maxlength')">
+      Please enter a valid 3 digit code
+  </mat-error>
+  </mat-form-field>  
+</label>
+
+<br>
+
+<label>
+  Amount:
+  <mat-form-field class="full-width-input">
+  <input matInput type="text" formControlName="amount" pattern="^(0*[1-9][0-9]*(\.[0-9]+)?|0+\.[0-9]*[1-9][0-9]*)$" required>
+  <mat-error *ngIf="cardForm.get('amount').hasError('pattern') && !cardForm.get('amount').hasError('required')">
+      Amount should be greater than 0
+  </mat-error>
+  <mat-error *ngIf="cardForm.get('amount').hasError('required')">
+        Amount is required
+  </mat-error>
+  </mat-form-field>  
+</label>
+
+<br>
+<br>
+
+<button mat-raised-button color="primary" type="submit">Pay</button>
+<br>
+<br>
+
+</form>
+<router-outlet></router-outlet>
